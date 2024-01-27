@@ -92,7 +92,7 @@ SECRET_KEY = 'django-insecure-9@o0_4mmilf)p9ey@gchl54at2(k(&wrbj)^6t4e-^-8(bz#9u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost:800", "api.mindtask.site"]
 
 
 # Application definition
@@ -139,12 +139,13 @@ CORS_ORIGIN_WHITELIST = [
      'http://localhost:5173',
      "http://192.168.0.12:3000",
      "http://192.168.0.12:3001",
-     "https://sidelops.com"
+     "https://sidelops.com",
+     "https://mindtask.site"
 ]
 
 
 CORS_ALLOW_CREDENTIALS = True
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://192.168.0.12:3000', "http://192.168.0.12:3001", "https://sidelops.com"]
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://192.168.0.12:3000', "http://192.168.0.12:3001", "https://sidelops.com", "https://mindtask.site"]
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = None
 
