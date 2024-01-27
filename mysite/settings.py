@@ -61,19 +61,23 @@ with open(jsonFilepath, "r", encoding='utf8') as f:
         
         BASESTATIC = serverSettingdict["static-root"]
         BASEMEDIA = serverSettingdict["media-root"]
-        DATABASE_SET = {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'sidelop_db',
-            'USER': 'sidelops_master',
-            'PASSWORD': 'cKd3PUkffQBw',
-            'HOST': 'sidelops.cdgwjjblcvw5.ap-northeast-1.rds.amazonaws.com',
-            'PORT': '5432',
-            'AUTO_REQUESTS': True,
-            }
+        # DATABASE_SET = {
+        #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #     'NAME': 'sidelop_db',
+        #     'USER': 'sidelops_master',
+        #     'PASSWORD': 'cKd3PUkffQBw',
+        #     'HOST': 'sidelops.cdgwjjblcvw5.ap-northeast-1.rds.amazonaws.com',
+        #     'PORT': '5432',
+        #     'AUTO_REQUESTS': True,
+        #     }
         
     
     
-    
+DATABASE_SET = {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'mindtask_db',
+            'AUTO_REQUESTS': True
+            }
 
 
 
@@ -145,7 +149,7 @@ CORS_ORIGIN_WHITELIST = [
 
 
 CORS_ALLOW_CREDENTIALS = True
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://192.168.0.12:3000', "http://192.168.0.12:3001", "https://sidelops.com", "https://mindtask.site"]
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', 'http://192.168.0.12:3000', "http://192.168.0.12:3001", "https://mindtask.site"]
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = None
 
