@@ -85,9 +85,9 @@ env.read_env(os.path.join(BASE_DIR,'.env'))
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = BASEDEBUG
 
-ALLOWED_HOSTS = ["localhost:800", "api.mindtask.site"]
+ALLOWED_HOSTS = ["localhost", "api.mindtask.site"]
 
 
 # Application definition
@@ -145,6 +145,10 @@ SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_SAMESITE = None
 
 
+STATIC_URL = 'static/'
+MEDIA_ROOT = BASEMEDIA
+MEDIA_URL = '/media/'
+STATIC_ROOT = BASESTATIC
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
