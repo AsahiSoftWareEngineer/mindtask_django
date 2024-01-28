@@ -1,4 +1,4 @@
 # created by virtualenv automatically
 .env
 ./log/system.log
-./mysite/json/setting.json
+./mysite/json/settings.json
